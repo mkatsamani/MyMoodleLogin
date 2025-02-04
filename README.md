@@ -1,1 +1,3 @@
 # MyMoodleLogin
+
+This code is a moodle local plugin that implements login. At first the user is asked to sign up in a moodle form, giving surname, name, country and email. Then the plugin sends a verification email to the user, with a temporary password and a link to change the password. In order to send the email, I have made the corresponding settings in my php.ini and sendmail.ini. Also the local_country table must be populated with data to appear in the sign up form dropdown. The user opens the link that is sent via email and another moodle form opens asking the user to reset the password. A hash algorithm is used to save the password in the database. Afterwards the user can log in with the new password.
